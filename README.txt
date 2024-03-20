@@ -5,6 +5,9 @@
 https://db.itkc.or.kr/dir/item?itemId=MO#dir/node?grpId=&itemId=MO&gubun=book&depth=5&cate1=H&cate2=&dataGubun=%EC%B5%9C%EC%A2%85%EC%A0%95%EB%B3%B4&dataId=ITKC_MO_0650A_0240_070_0050
 
 
+동영상 강의 : http://naver.me/GxNgScqA
+Git hub : https://github.com/eurekasolution/cnudc
+
 2024-03-13(수)
     필요한 검색 : 
         네이버 : 지식백과 논어집주
