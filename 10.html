@@ -53,21 +53,31 @@
       </div>
     </div>
 
-    <form>
+    <script>
+      function check()
+      {
+        var id = document.querySelector("#id");
+        var pass = document.querySelector("#pass");
+        alert(id.value);
+        alert(pass.value);
+      }
+    </script>
+
+    <form method="post" action="11.html" onSubmit="return check()">
       <div class="row">
         <div class="col-2 colLine">아이디</div>
         <div class="col colLine">
-          <input type="text" name="id" class="form-control">
+          <input type="text" name="id" id="id" class="form-control">
         </div>
       </div>
       <div class="row">
         <div class="col-2 colLine">비번</div>
         <div class="col colLine">
-          <input type="password" name="pass" class="form-control">
+          <input type="password" name="pass" id="pass" class="form-control">
         </div>
       </div>
       <div class="row">
-        <button type="button" class="btn btn-danger form-control btn-sm">로그인</button>
+        <button type="submit" class="btn btn-danger form-control btn-sm">로그인</button>
       </div>
 
     </form>
