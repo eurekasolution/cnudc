@@ -15,7 +15,7 @@ a:visited { text-decoration:none; color:#333333;}
     color:#FFFFFF; 
     font-weight:bold; 
 }
-.dropdown-menu a:hover { 
+.dropdown-menu a:link { 
     text-decoration:underline;
     color:#333333;
 }
