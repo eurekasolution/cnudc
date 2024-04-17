@@ -19,16 +19,23 @@
     <div class="container">
         <div class="row">
             <?php
-                if($_SESSION["sinoid"])
+                if(isset($_SESSION["sinoid"]))
                 {
                     $name = $_SESSION["sinoname"];
                     echo "$name 님 버튼";
                 }else
                 {
                     ?>
-                    <form>
-
-                    
+                    <form method="post" action="24.php">
+                    <div class="col colLine">
+                        <input type="text" name="id">
+                    </div>
+                    <div class="col colLine">
+                        <input type="password" name="pass">
+                    </div>
+                    <div class="col colLine">
+                        <button type="submit" class="btn btn-primary">로그인</button>
+                    </div>
                     </form>
 
                     <?php
