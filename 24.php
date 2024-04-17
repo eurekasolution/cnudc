@@ -12,6 +12,11 @@
         $_SESSION["sinoid"] = $id;
         $_SESSION["sinoname"] = "홍길동";
         $memo = "홍길동님 반갑습니다.";
+    }else if($id == "admin" and $pass== "1234")
+    {
+        $_SESSION["sinoid"] = $id;
+        $_SESSION["sinoname"] = "관리자";
+        $memo = "관리자님 반갑습니다.";
     }else
     {
         $memo = "아이디와 비밀번호를 확인하세요.";

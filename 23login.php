@@ -23,7 +23,19 @@
                 if(isset($_SESSION["sinoid"]))
                 {
                     $name = $_SESSION["sinoname"];
-                    echo "$name 님 버튼";
+                    echo "
+                    <script>
+                        function goLogout()
+                        {
+                            location.href='25logout.php';
+                        }
+                    </script>
+                    <div class='col colLine text-end'>
+                        $name 님 
+                        <button type='button' class='btn btn-primary' onClick='goLogout()'>로그아웃</button>
+                    </div>
+                    ";
+                   
                 }else
                 {
                     ?>
