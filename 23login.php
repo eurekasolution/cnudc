@@ -17,6 +17,7 @@
 </head>
 <body>
     <div class="container">
+        <form method="post" action="24.php">
         <div class="row">
             <?php
                 if(isset($_SESSION["sinoid"]))
@@ -26,22 +27,24 @@
                 }else
                 {
                     ?>
-                    <form method="post" action="24.php">
+                    
+                    <div class="col-6 colLine"></div>
                     <div class="col colLine">
-                        <input type="text" name="id">
+                        <input type="text" class="form-control" placeholder="ID" name="id">
                     </div>
                     <div class="col colLine">
-                        <input type="password" name="pass">
+                        <input type="password" class="form-control" placeholder="비밀번호" name="pass">
                     </div>
                     <div class="col colLine">
-                        <button type="submit" class="btn btn-primary">로그인</button>
+                        <button type="submit" class="btn btn-primary form-control">로그인</button>
                     </div>
-                    </form>
+                    
 
                     <?php
                 }
             ?>
         </div>
+        </form>
     </div>
 </body>
 </html>
