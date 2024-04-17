@@ -58,5 +58,15 @@
         </div>
         </form>
     </div>
+
+    <?php
+        if(5 > 11)
+        {
+            echo "AAA";
+        }else
+        {
+            echo "BBB";
+        }
+    ?>
 </body>
 </html>
