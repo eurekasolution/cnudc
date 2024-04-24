@@ -15,6 +15,28 @@
 
 <?php
 
+  $local = "서울,경기,충청,대전,제주,기타";
+  $split = explode(",", $local);
+
+  for($i=0; $i< count($split); $i++)
+  {
+    echo "$split[$i]<br>";
+  }
+
+  $words = "水旱果天數乎。果人事乎。堯湯未免。天數也。休咎有徵。人事也。古之人修人事以應天數。故有九七年之厄而民不病。";
+  $word = explode("。", $words);
+
+  for($i=0; $i< count($word); $i++)
+  {
+    echo "$word[$i]<br>";
+    for($j=0; $j< mb_strlen($word[$i]); $j++)
+    {
+      $ch = mb_substr($word[$i], $j, 1);
+      echo "$ch <br>";
+    }
+  }
+
+
   $dict = array("apple", "desk", "computer");
 
   for($i=0; $i< count($dict); $i++)
