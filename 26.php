@@ -23,18 +23,42 @@
     echo "$split[$i]<br>";
   }
 
+  // 010-1234-5678010-1a34-5678010-1244-5678010-1b34-5678 
   $words = "水旱果天數乎。果人事乎。堯湯未免。天數也。休咎有徵。人事也。古之人修人事以應天數。故有九七年之厄而民不病。";
   $word = explode("。", $words);
 
+  //$dict = [];
+  $dict = array();
   for($i=0; $i< count($word); $i++)
   {
     echo "$word[$i]<br>";
+  
     for($j=0; $j< mb_strlen($word[$i]); $j++)
     {
       $ch = mb_substr($word[$i], $j, 1);
-      echo "$ch <br>";
+      if(isset($dict[$ch]))
+      {
+        // 이미 나온 글자
+        $dict[$ch] ++;
+      }else
+      { // 처음 나온 글자
+        $dict[$ch] = 1;
+      }
+      echo "$ch : $dict[$ch] <br>";
     }
+    
   }
+
+  echo "----------------------------------------------<br>";
+  arsort($dict);
+
+  // print_r($dict);
+
+  foreach($dict as $key => $value)
+  {
+    echo "$key : $value<br>";
+  }
+
 
 
   $dict = array("apple", "desk", "computer");
