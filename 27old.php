@@ -27,7 +27,7 @@
  
 ?>
 <div class="container">
-  <form method="post" action="<?php echo $_SERVER["PHP_SELF"]?>">  
+  <form method="post" action="27.php">  
   <div class="row">
     <div class="col-10 colLine">
       <textarea name="text" class="form-control" rows="10"><?php echo $words?>
