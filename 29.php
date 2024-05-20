@@ -12,8 +12,47 @@
 
 </head>
 <body>
-<div class="container">
+<?php
+  $value = 202212345 % 20 +1;
+  echo "value = $value<br>";
+?>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
 
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', '입학생', '휴학생', '졸업생'],
+          ['2019',  1000,      400, 300],
+          ['2020',  1170,      460, 800],
+          ['2021',  660,       1120, 0],
+          ['2022',  1030,      540, 550],
+          ['2023',  1030,      540, 270],
+          ['2024',  1030,      540, 330]
+        ]);
+
+        var options = {
+          title: '한문학과 학생 분포',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+<div class="container">
+  <div class="row">
+    <div class="col colLine">구글차트</div>
+  </div>
+  <div class="row">
+    <div class="col colLine">
+    <div id="curve_chart" style="width: 100%; height: 500px"></div>
+    </div>
+  </div>
 </div> <!-- container -->
 </body>
 </html>
