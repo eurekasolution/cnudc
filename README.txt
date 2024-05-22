@@ -8,6 +8,15 @@ https://db.itkc.or.kr/dir/item?itemId=MO#dir/node?grpId=&itemId=MO&gubun=book&de
 동영상 강의 : http://naver.me/GxNgScqA
 Git hub : https://github.com/eurekasolution/cnudc
 
+로또 프로그램을 PHP로 다음 조건을 만족하도록 만들어줘.
+- 몇 게임 할 것인지 사용자한테 입력을 받는다.
+- 게임 수 만큼 1~45까지 랜덤한 값을 6회 뽑는다.
+- 6개의 숫자에는 중복이 허용되지 않음
+- 각 6개를 오름차순으로 정렬
+- 10 미만의 수는 03과 같은 형태로 출력해 줘.
+
+
+
 w3schools.com
 2024-04-03
 
