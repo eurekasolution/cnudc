@@ -14,7 +14,8 @@
 <body>
  
 <?php
-  $url = "https://plus.cnu.ac.kr/_prog/lostandfound/?site_dvs_cd=kr&menu_dvs_cd=07080301";
+  //$url = "https://plus.cnu.ac.kr/_prog/lostandfound/?site_dvs_cd=kr&menu_dvs_cd=07080301";
+  $url = "https://plus.cnu.ac.kr/_prog/lostandfound/?site_dvs_cd=kr&menu_dvs_cd=07080301&gubun=1&skey=&sval=&GotoPage=2";
   $curl = curl_init();
   curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -31,6 +32,19 @@
   </div>
 </div>
 
+<?php
+  $split = explode("<td class='title'>", $response);
+  for($i=1; $i< count($split); $i++)
+  {
+    //echo "<xmp>$split[$i]</xmp><hr>";
+    $split2 = explode("</a>", $split[$i]);
+    //echo "<xmp>$split2[0]</xmp><hr>";
+
+    $split3 = explode("'>", $split2[0]);
+    echo "<xmp>$split3[1]</xmp><hr>";
+
+  }
+?>
 
 </body>
 </html>
