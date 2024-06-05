@@ -4,6 +4,30 @@
 고전종합DB 운양집 속 4권 링크
 https://db.itkc.or.kr/dir/item?itemId=MO#dir/node?grpId=&itemId=MO&gubun=book&depth=5&cate1=H&cate2=&dataGubun=%EC%B5%9C%EC%A2%85%EC%A0%95%EB%B3%B4&dataId=ITKC_MO_0650A_0240_070_0050
 
+2024-06-05(수) - 데이터베이스
+아이디, 이름, 생년월일
+http://localhost/phpmyadmin
+
+create table users(
+    idx int(10) auto_increment,
+    id  char(20) unique,
+    name    char(20),
+    birth   date,
+    primary key(idx)
+);
+
+
+삽입(Insert)
+
+insert into users(id, name, birth) values ('test', '테스트', '2000-01-01');
+
+검색(Select)
+
+갱신(Update)
+
+삭제(Delete)
+
+
 
 동영상 강의 : http://naver.me/GxNgScqA
 Git hub : https://github.com/eurekasolution/cnudc
