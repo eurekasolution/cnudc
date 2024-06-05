@@ -20,13 +20,27 @@ create table users(
 삽입(Insert)
 
 insert into users(id, name, birth) values ('test', '테스트', '2000-01-01');
+insert into users(id, name, birth) values ('kdhong', '홍길동', '2010-02-07');
+insert into users(id, name, birth) values ('sslee', '이순신', '1935-03-09');
+insert into users(id, name, birth) values ('kim', '김개똥', '2001-01-01');
 
 검색(Select)
 
+select * from users;
+select * from users order by name asc;
+
+
+select * from users where birth>'2000-01-05';
+
+
+
 갱신(Update)
 
-삭제(Delete)
+update users set id='xyz' where idx='3';
 
+
+삭제(Delete)
+delete from users where idx='3';
 
 
 동영상 강의 : http://naver.me/GxNgScqA
